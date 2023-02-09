@@ -28,7 +28,7 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-    text = input().srtip()
+    text = input().strip()
     mismatch = find_mismatch(text)
     if isinstance(result, int):
         print(result)
