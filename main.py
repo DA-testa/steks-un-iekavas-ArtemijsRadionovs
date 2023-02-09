@@ -22,14 +22,14 @@ def find_mismatch(text):
                 return i + 1
             opening_brackets_stack.pop()
             
-            
     if opening_brackets_stack:
         return opening_brackets_stack[-1].position 
     return "Success"
 
+
 def main():
     text = input().strip()
-    mismatch = find_mismatch(text)
+    result = find_mismatch(text)
     if isinstance(result, int):
         print(result)
     else:
