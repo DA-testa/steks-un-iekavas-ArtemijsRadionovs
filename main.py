@@ -25,6 +25,7 @@ def find_mismatch(text):
     return "Success"
 
 def main():
+    result = 0
     check_for_file = input()
     if check_for_file.lower() == "f":
         file = input()
