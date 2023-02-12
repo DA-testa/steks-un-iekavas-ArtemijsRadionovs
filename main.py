@@ -29,9 +29,9 @@ def main():
     text = text[5:]
     result = find_mismatch(text)
     if isinstance(result, int):
-        print("\n" + str(result) + "\n")
+        print(result)
     else:
-        print("\n" + str(result) + "\n")
+        print(result)
 
 if __name__ == "__main__":
     main()
