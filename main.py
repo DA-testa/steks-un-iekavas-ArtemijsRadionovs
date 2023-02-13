@@ -25,9 +25,27 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-    text = input().strip()
-    text = text[5:]
-    result = find_mismatch(text)
+#     text = input().strip()
+#     text = text[5:]
+#     result = find_mismatch(text)
+    
+    def main():
+    result = 0
+    check_for_file = input()
+    if check_for_file.lower() == "f":
+        file = input()
+        with open(file, "r") as f:
+            file_code = f.read()
+            result = find_mismatch(file_code)
+    elif check_for_file == "i":
+        text = input()
+        result = find_mismatch(text)
+    
+    if isinstance(result, int):
+        print(result)
+    else:
+        print(result)
+
     if isinstance(result, int):
         print(result)
     else:
