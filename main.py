@@ -24,8 +24,12 @@ def find_mismatch(text):
         return opening_brackets_stack[-1].position 
     return "Success"
 
+result = 0
 def main():
-    result = 0
+#     text = input().strip()
+#     text = text[5:]
+#     result = find_mismatch(text)
+    
     check_for_file = input()
     if check_for_file.lower() == "f":
         file = input()
@@ -36,6 +40,11 @@ def main():
         text = input()
         result = find_mismatch(text)
     
+    if isinstance(result, int):
+        print(result)
+    else:
+        print(result)
+
     if isinstance(result, int):
         print(result)
     else:
