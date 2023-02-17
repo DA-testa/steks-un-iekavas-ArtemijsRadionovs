@@ -1,6 +1,7 @@
 # python3
 
 from collections import namedtuple
+import requests
 
 Bracket = namedtuple("Bracket", ["char", "position"])
 
@@ -24,31 +25,19 @@ def find_mismatch(text):
         return opening_brackets_stack[-1].position 
     return "Success"
 
-result = 0
 def main():
-#     text = input().strip()
-#     text = text[5:]
-#     result = find_mismatch(text)
-    
-    check_for_file = input()
-    if check_for_file.lower() == "f":
-        file = input()
-        with open(file, "r") as f:
-            file_code = f.read()
-            result = find_mismatch(file_code)
-    elif check_for_file == "i":
-        text = input()
-        result = find_mismatch(text)
-    
-    if isinstance(result, int):
-        print(result)
-    else:
-        print(result)
 
-    if isinstance(result, int):
-        print(result)
+    url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
+    check_for_I = input()
+    if check_for_I.startswith("I"):
+        text = input()
     else:
-        print(result)
+        text = requests.get(url).text
+    
+    if find_mismatch(text) is None:
+        print("Success")
+    else:
+        print(find_mismatch(text))
 
 if __name__ == "__main__":
     main()
