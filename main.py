@@ -28,7 +28,7 @@ def main():
 
     url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
     check_for_I = input()
-    if check_for_file.startswith("I"):
+    if check_for_I.startswith("I"):
         text = input()
     else:
         text = request.get(url).text
