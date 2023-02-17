@@ -30,7 +30,6 @@ def main():
     check_for_I = input()
     if check_for_file.startswith("I"):
         text = input()
-        result = 
     else:
         text = request.get(url).text
     
