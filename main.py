@@ -38,7 +38,8 @@ def main():
         text = requests.get("https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0").text
         #         text = request.get(url).text
     if find_mismatch(text) is None:
-        print("Success")
+#         print("Success")
+        print(text)
     else:
         print(find_mismatch(text))
 
