@@ -26,20 +26,16 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-    #     text = input().strip()
-    #     text = text[5:]
-    #     result = find_mismatch(text)
-    #     print(result)
-    test_url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
+
+    url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
     check_for_I = input()
     if check_for_I.startswith("I"):
         text = input()
     else:
-        text = requests.get(test_url).text
-        
+        text = requests.get(url).text
+    
     if find_mismatch(text) is None:
         print("Success")
-        #         print(" I " + text)
     else:
         print(find_mismatch(text))
 
