@@ -35,7 +35,7 @@ def main():
     if check_for_I.startswith("I"):
         text = input()
     else:
-        text = requests.get("https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/1").text
+        text = requests.get("https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0").text
         #         text = request.get(url).text
     if find_mismatch(text) is None:
         print("Success")
