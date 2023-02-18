@@ -26,18 +26,13 @@ def find_mismatch(text):
         return opening_brackets_stack[-1].position 
     return "Success"
 
-def main():
-    test_url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
-    check_for_I = input()
-    if check_for_I.startswith("I"):
-        text = input()
-    else:
-        text = requests.get(test_url).text
+check_for_I = input()
+if check_for_I.startswith("I"):
+    text = input()
+else:
+    text = requests.get("https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0").text
     
-    if find_mismatch(text) is None:
-        print("Success")
-    else:
-        print(find_mismatch(text))
-
-if __name__ == "__main__":
-    main()
+if find_mismatch(text) is None:
+    print("Success")
+else:
+    print(find_mismatch(text))
