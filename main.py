@@ -25,18 +25,21 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-
-    url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
-    check_for_I = input()
-    if check_for_I.startswith("I"):
-        text = input()
-    else:
-        text = request.get(url).text
+    text = input().strip()
+    text = text[5:]
+    result = find_mismatch(text)
+    print(result)
+#     url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
+#     check_for_I = input()
+#     if check_for_I.startswith("I"):
+#         text = input()
+#     else:
+#         text = request.get(url).text
     
-    if find_mismatch(text) is None:
-        print("Success")
-    else:
-        print(find_mismatch(text))
+#     if find_mismatch(text) is None:
+#         print("Success")
+#     else:
+#         print(find_mismatch(text))
 
 if __name__ == "__main__":
     main()
