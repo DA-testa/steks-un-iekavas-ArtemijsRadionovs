@@ -3,6 +3,7 @@
 from collections import namedtuple
 import requests
 
+
 Bracket = namedtuple("Bracket", ["char", "position"])
 
 def are_matching(left, right):
@@ -26,13 +27,12 @@ def find_mismatch(text):
     return "Success"
 
 def main():
-
-    url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
+    test_url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
     check_for_I = input()
     if check_for_I.startswith("I"):
         text = input()
     else:
-        text = requests.get(url).text
+        text = requests.get(test_url).text
     
     if find_mismatch(text) is None:
         print("Success")
