@@ -30,16 +30,16 @@ def main():
     #     text = text[5:]
     #     result = find_mismatch(text)
     #     print(result)
-    #     url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
+    test_url = "https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0"
     check_for_I = input()
     if check_for_I.startswith("I"):
         text = input()
     else:
-        text = requests.get("https://github.com/DA-testa/steks-un-iekavas-ArtemijsRadionovs/blob/main/test/0").text
-        #         text = request.get(url).text
+        text = requests.get(test_url).text
+        
     if find_mismatch(text) is None:
-#         print("Success")
-        print(text)
+        #         print("Success")
+        print(" I " + text)
     else:
         print(find_mismatch(text))
 
